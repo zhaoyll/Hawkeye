@@ -1,0 +1,43 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+html {
+  background: var(--bg) !important;
+  transition: background-color 0.3s;
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --border: #e0e0e0;
+  --card: #ffffff;
+  --primary: #0D0D0D;
+  --Background:#4564;
+}
+
+html.dark {
+  --bg: #1a1a1a;
+  --text: #f0f0f0;
+  --border: #333333;
+  --card: #2a2a2a;
+  --primary: #0D0D0D;
+}
+
+body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.layout {
+  background: var(--bg) !important;
+  transition: background-color 0.3s;
+}
