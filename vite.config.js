@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: './',
+  base: process.env.NODE_ENV === 'production' ? '/Hawkeye/' : '/',
 })
 
 //以上内容为了迎合github生成规则，如果是发布版本还是要下面的混淆版本
