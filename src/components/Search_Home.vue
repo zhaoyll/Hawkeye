@@ -45,7 +45,10 @@ const list = ref([
   {
     name: '工作台',
     icon: new URL('../assets/Workbench.svg', import.meta.url).href
-  }
+  }, {
+    name: '用户画像',
+    icon: new URL('../assets/UserIcon.svg', import.meta.url).href
+  },
 ]);
 
 
@@ -54,7 +57,6 @@ const tabPosition = ref('left')
 
 
 <template>
-
   <!-- 主布局页面 -->
   <div class="layout">
     <!-- 左侧边栏 -->
@@ -78,7 +80,7 @@ const tabPosition = ref('left')
           <!-- 历史记录列表 -->
           <div class="left-half">
             <ul class="hiscolorf">
-              <li @click="Listclick" class="HisColor" v-for="(item, index) in list" :key="index">
+              <li @click="Listclick" class="HisColorr" v-for="(item, index) in list" :key="index">
                 <img class="search_logo" :src="item.icon" alt="" />
                 {{ item.name }}
               </li>
@@ -339,7 +341,6 @@ body,
   /* border-radius: 80px; */
   /* margin-left: auto; */
   cursor: pointer;
-  margin-right: 0;
   text-align: right;
   user-select: none;
   pointer-events: none;
@@ -369,22 +370,21 @@ body,
   font-size: 14px;
 }
 
-.HisColor {
+.HisColorr {
+  margin-top: 16px;
   margin-left: 8px;
   margin-right: 8px;
   border-radius: 8px;
-  /* padding-left: 8px;
-  padding-right: 8px; */
   text-align: center;
   padding-top: 12px;
   padding-bottom: 12px;
   list-style: none;
-  margin-bottom: 5px;
   font-size: 15px;
   background-color: #F2F3F4;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .HisColor:hover,
