@@ -1,8 +1,9 @@
-name: Vue Auto Build & Deploy
+name: Deploy
 
 on:
   push:
-    branches: [ main ]  # 你推 main 就自动构建
+    branches:
+      - main
 
 jobs:
   build:
@@ -10,18 +11,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: 设置 Node.js
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: 安装依赖（云端执行）
-        run: npm install
+      - run: npm install
+      - run: npm run build
 
-      - name: 在线编译 Vue（云端执行）
-        run: npm run build
-
-      - name: 发布到 GitHub Pages
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
