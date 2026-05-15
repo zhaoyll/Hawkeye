@@ -94,6 +94,6 @@ export default defineConfig({
       }
     }
   },
-  base: './',  // 👈 就这行是关键！
+  base: process.env.NODE_ENV === 'production' ? '/Hawkeye/' : '/',
 
 })
