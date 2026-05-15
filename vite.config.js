@@ -2,9 +2,6 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import obfuscator from 'rollup-plugin-obfuscator'; // 导入代码混淆插件
 
-module.exports = {
-  publicPath: '/Hawkeye/'
-}
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
