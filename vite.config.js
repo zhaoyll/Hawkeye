@@ -94,6 +94,6 @@ export default defineConfig({
       }
     }
   },
-  base: '/Hawkeye/',  // 👈 就这行是关键！
+  base: './',  // 👈 就这行是关键！
 
 })
