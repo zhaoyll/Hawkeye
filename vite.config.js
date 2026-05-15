@@ -93,5 +93,6 @@ export default defineConfig({
         // 删除 rewrite，直接转发
       }
     }
-  }
+  },
+  base: './'   // 必须加，否则 GitHub 路径找不到
 })
