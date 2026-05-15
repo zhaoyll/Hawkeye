@@ -69,13 +69,18 @@
                         <div style="display: flex;flex-direction: row;">
                             <img :src="row.Cover" style="width: 35px; height: 35px; border-radius: 50%;" />
                             <div style="margin-left:8px;display: flex;flex-direction: column;">
-                                <div style="font-size: 15px;font-weight: bold;">作者名称</div>
+                                <div style="font-size: 15px;font-weight: bold;">{{ row.address }}</div>
                                 <div style="color: #8C8C8C;">粉丝1.2w</div>
                             </div>
                         </div>
                     </template>
                 </el-table-column>
-                <el-table-column label="互动数据">
+                <el-table-column label="平台" width="100">
+                    <template #default="{ row }">
+                        <img :src="row.avatar" style="width: 40px; height: 40px; " />
+                    </template>
+                </el-table-column>
+                <el-table-column label="互动数据" width="200">
                     <template #default="{ row }">
                         <div style="display: flex;flex-direction: row;text-align: center;">
                             <img src="../assets/Platform/Like.png"
@@ -87,11 +92,7 @@
                         </div>
                     </template>
                 </el-table-column>
-                <el-table-column label="平台" width="100">
-                    <template #default="{ row }">
-                        <img :src="row.avatar" style="width: 40px; height: 40px; border-radius: 50%;" />
-                    </template>
-                </el-table-column>
+
                 <el-table-column label="精准度" width="100">
                     <template #default="{ row }">
                         <div style="color: #09B850; font-size: 20px; font-weight: 500;">
@@ -125,28 +126,29 @@ const tableData = ref([
         Cover: 'https://p3-sign.douyinpic.com/tos-cn-i-dy/0832442d70374be0a8083938c16a18cc~tplv-dy-resize-walign-adapt-aq:540:q75.jpeg?lk3s=138a59ce&x-expires=1779987600&x-signature=wloLeAVdj7JYL%2F3pnp71G46dtEY%3D&from=327834062&s=PackSourceEnum_AWEME_DETAIL&se=false&sc=cover&biz_tag=aweme_video&l=20260515013407B622B20152CBA1042A4B',
         name: '原创末日故事连载【归墟】第一集-失踪',
         address: '泫九',
+        Photo: '',
         avatar: tiktokImg,
         Precision: "99%"
 
     }, {
-        Cover: 'https://p3-sign.douyinpic.com/tos-cn-i-dy/0832442d70374be0a8083938c16a18cc~tplv-dy-resize-walign-adapt-aq:540:q75.jpeg?lk3s=138a59ce&x-expires=1779987600&x-signature=wloLeAVdj7JYL%2F3pnp71G46dtEY%3D&from=327834062&s=PackSourceEnum_AWEME_DETAIL&se=false&sc=cover&biz_tag=aweme_video&l=20260515013407B622B20152CBA1042A4B',
-        name: '原创末日故事连载【归墟】第一集-失踪',
+        Cover: 'https://p3-sign.douyinpic.com/tos-cn-i-dy/ae255eac30fa4b9b8a75051d6c6d0420~tplv-dy-resize-walign-adapt-aq:540:q75.jpeg?lk3s=138a59ce&x-expires=1780023600&x-signature=mTzWPR91SCWYW41zbFbzWh0jD64%3D&from=327834062&s=PackSourceEnum_AWEME_DETAIL&se=false&sc=cover&biz_tag=aweme_video&l=20260515115707518FB09CC8EFB3346FAF',
+        name: '1——100000000美元的房子是什么样的 #野兽先生 #老外真会玩 #对比测评',
         address: '泫九',
-        avatar: tiktokImg,
+        avatar: redbookImg,
         Precision: "99%"
 
     }, {
-        Cover: 'https://p3-sign.douyinpic.com/tos-cn-i-dy/0832442d70374be0a8083938c16a18cc~tplv-dy-resize-walign-adapt-aq:540:q75.jpeg?lk3s=138a59ce&x-expires=1779987600&x-signature=wloLeAVdj7JYL%2F3pnp71G46dtEY%3D&from=327834062&s=PackSourceEnum_AWEME_DETAIL&se=false&sc=cover&biz_tag=aweme_video&l=20260515013407B622B20152CBA1042A4B',
-        name: '原创末日故事连载【归墟】第一集-失踪',
+        Cover: 'https://p3-sign.douyinpic.com/tos-cn-i-dy/b566d83285b74cb3929500315e487aac~tplv-dy-resize-walign-adapt-aq:540:q75.jpeg?lk3s=138a59ce&x-expires=1780023600&x-signature=0P8nGBqnN0CE0dck8AwHSydCkQQ%3D&from=327834062&s=PackSourceEnum_AWEME_DETAIL&se=false&sc=cover&biz_tag=aweme_video&l=20260515115922B46D66C881617657092E',
+        name: '在全球通货膨胀率最高的国家，100万亿能买多少东西，人们生活怎么样#就这样穿过春天#龙牙轻爽科技T恤#非洲小钟',
         address: '泫九',
-        avatar: tiktokImg,
+        avatar: weiboImg,
         Precision: "99%"
 
     }, {
-        Cover: 'https://p3-sign.douyinpic.com/tos-cn-i-dy/0832442d70374be0a8083938c16a18cc~tplv-dy-resize-walign-adapt-aq:540:q75.jpeg?lk3s=138a59ce&x-expires=1779987600&x-signature=wloLeAVdj7JYL%2F3pnp71G46dtEY%3D&from=327834062&s=PackSourceEnum_AWEME_DETAIL&se=false&sc=cover&biz_tag=aweme_video&l=20260515013407B622B20152CBA1042A4B',
-        name: '原创末日故事连载【归墟】第一集-失踪',
+        Cover: 'https://p26-sign.douyinpic.com/tos-cn-i-dy/0988033fda28452cb158c02292ee00f9~tplv-dy-resize-walign-adapt-aq:540:q75.jpeg?lk3s=138a59ce&x-expires=1780023600&x-signature=POn9XlLvCyaP3PXPgVOiSUzskfI%3D&from=327834062&s=PackSourceEnum_AWEME_DETAIL&se=false&sc=cover&biz_tag=aweme_video&l=202605151159526DCCE3BC31DF4326572D',
+        name: '没有流量炒作，仅凭一首歌碾压欧美顶流，高缇耶的清醒太难得 #抖音精选 #gotye #somebodythatiusedtoknow #格莱美',
         address: '泫九',
-        avatar: tiktokImg,
+        avatar: zhihuImg,
         Precision: "99%"
 
     },
