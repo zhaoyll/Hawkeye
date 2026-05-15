@@ -94,5 +94,5 @@ export default defineConfig({
       }
     }
   },
-  base: './'   // 必须加，否则 GitHub 路径找不到
+  base: '/Hawkeye/',  // 👈 就这行是关键！
 })
